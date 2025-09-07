@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+void ReadNumber(int &Num1, int &Num2, int &Num3)
+{
+	cout << "Please Enter Num 1 " << endl;
+	cin >> Num1;
+
+	cout << "Please Enter Num 2 " << endl;
+	cin >> Num2;
+
+	cout << "Please Enter Num 3 " << endl;
+	cin >> Num3;
+}
+
+float SumOf3Numbers(int Num1, int Num2, int Num3)
+{
+	float sum = 0;
+	sum = (Num1 + Num2 + Num3);
+
+	return  sum;
+}
+
+void PrintResult(float sum)
+{
+	cout << "Sum Of 3 Number: " << sum << endl;
+}
+
+int main()
+{
+	int Num1, Num2, Num3;
+	ReadNumber(Num1, Num2, Num3);
+	PrintResult(SumOf3Numbers(Num1,Num2,Num3));
+	
+}
+
