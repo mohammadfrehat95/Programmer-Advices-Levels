@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void ReadNumber(int& a, int& b)
+{
+	cout << "Please Enter a " << endl;
+	cin >> a;
+
+	cout << "Please Enter b " << endl;
+	cin >> b;
+}
+
+float CalculateCircleAreaInAnIsoscelesTriangle(int a, int b)
+{
+	const float PI = 3.141592653589793238;
+	float area;
+	area = PI * (pow(b, 2) / 4) * ((2 * a - b) / (2 * a + b));
+	return area;
+}
+
+void PrintResult(float area)
+{
+	cout << "Circle area by An IsoscelesTriangle Is: " << area << endl;
+}
+
+int main()
+{
+	int a, b;
+	ReadNumber(a, b);
+	PrintResult(CalculateCircleAreaInAnIsoscelesTriangle(a, b));
+}
+
