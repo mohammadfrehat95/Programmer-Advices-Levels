@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+void ReadNumber(int &Num1, int &Num2, int &Num3)
+{
+	cout << "Please Enter Num 1 " << endl;
+	cin >> Num1;
+
+	cout << "Please Enter Num 2 " << endl;
+	cin >> Num2;
+
+    cout << "Please Enter Num 3 " << endl;
+	cin >> Num3;
+}
+
+int MaxOf3Number(int Num1, int Num2,int Num3)
+{
+	if (Num1 > Num2 && Num1 > Num3)
+		return Num1;
+	else if (Num2 > Num1 && Num2 > Num3)
+		return Num2;
+	else
+		return Num3;
+}
+
+void PrintResult(int Num1, int Num2, int Num3)
+{
+	cout << "Max of Two Number is: " << MaxOf3Number(Num1, Num2,Num3) << endl;
+}
+
+int main()
+{
+	int Num1, Num2,Num3;
+	ReadNumber(Num1, Num2,Num3);
+	MaxOf3Number(Num1, Num2, Num3);
+	PrintResult(Num1, Num2, Num3);
+}
+
