@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+enum enPassOrFail {Pass = 1 , Fail = 2};
+
+struct stStudentInfo 
+{
+	int Mark;
+};
+
+stStudentInfo StudentInfo()
+{
+	stStudentInfo Info;
+
+	cout << "Please Enter Your Mark" << endl;
+	cin >> Info.Mark;
+
+	return Info;
+}
+
+enPassOrFail CheckMark(stStudentInfo Info)
+{
+	enPassOrFail PassOrFail;
+
+	if (Info.Mark >= 50)
+		return enPassOrFail::Pass;
+	else
+		return enPassOrFail::Fail;
+}
+
+void PrintResult(enPassOrFail PassOrFail)
+{
+	if (PassOrFail == enPassOrFail::Pass)
+		cout << "Pass" << endl;
+	else
+		cout << "Fail" << endl;
+}
+
+int main()
+{
+	PrintResult(CheckMark(StudentInfo()));
+	
+}
+
