@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int ReadNumber()
+{
+	int Number = 0;
+	cout << "Please Enter N to print from 1 to n" << endl;
+	cin >> Number;
+
+	return Number;
+}
+
+void PrintRangeFrom1toN(int n)
+{
+	for (int i = 1; i <= n; i++)
+	{
+		cout << i << endl;
+	}
+}
+
+int main()
+{
+	int N = ReadNumber();
+	PrintRangeFrom1toN(N);
+}
+
